@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Mwale Philip Mutuku, Electronics Engineer focused on solar electronics, manual fabrication, electrical troubleshooting, embedded systems, quality testing, and AI-assisted workflows.">
+<title>Mwale Philip Mutuku | Electronics Engineer</title>
+<style>
+:root {
+  --navy: #10263f;
+  --blue: #1976d2;
+  --sky: #eaf4ff;
+  --ink: #172638;
+  --muted: #637487;
+  --line: #dce6ef;
+  --white: #fff;
+  --bg: #f7faff;
+  --green: #16806b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 72px;
+}
+
+.brand {
+  font-weight: 850;
+  color: var(--navy);
+  letter-spacing: -.04em;
+  text-decoration: none;
+  font-size: 1.04rem;
+}
+
+.brand span {
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: .91rem;
+  font-weight: 650;
+  color: #40536a;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+}
+
+.hero {
+  padding: 76px 0 68px;
+  background: radial-gradient(circle at 85% 18%, #d8eaff 0, transparent 30%), linear-gradient(135deg, #f7fbff, #edf5ff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 99px;
+  background: #e2f2ee;
+  color: #116854;
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background: #19a47f;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5.7vw, 4.7rem);
+  line-height: 1.04;
+  letter-spacing: -.06em;
+  margin: 22px 0 18px;
+  color: var(--navy);
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+.hero p {
+  font-size: 1.12rem;
+  color: #53677d;
+  max-width: 650px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 750;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 8px 22px #1976d229;
+}
+
+.btn-primary:hover {
+  background: #105fb1;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border-color: #c8d7e6;
+  background: white;
+  color: var(--navy);
+}
+
+.btn-secondary:hover {
+  border-color: var(--blue);
+}
+
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo img {
+  height: 430px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 25px 65px #183d6524;
+}
+
+.photo-label {
+  position: absolute;
+  left: -22px;
+  bottom: 24px;
+  background: white;
+  padding: 16px 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px #17345220;
+  max-width: 220px;
+}
+
+.photo-label strong {
+  display: block;
+  color: var(--navy);
+}
+
+.photo-label small {
+  color: var(--muted);
+}
+
+.stats {
+  margin-top: -1px;
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 24px 0;
+  gap: 18px;
+}
+
+.stat {
+  padding-left: 18px;
+  border-left: 3px solid #c8e1ff;
+}
+
+.stat strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.stat span {
+  font-size: .83rem;
+  color: var(--muted);
+}
+
+section {
+  padding: 82px 0;
+}
+
+.section-head {
+  max-width: 700px;
+  margin-bottom: 34px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .75rem;
+  color: var(--blue);
+  font-weight: 850;
+}
+
+.section-head h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  color: var(--navy);
+  margin: 10px 0 12px;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.about-image img {
+  height: 390px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.about-copy p {
+  color: #53677d;
+}
+
+.check-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: .91rem;
+  font-weight: 650;
+}
+
+.check-list li:before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.skills {
+  background: #f0f6fc;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.skill-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--sky);
+  font-size: 1.35rem;
+}
+
+.skill-card h3 {
+  color: var(--navy);
+  margin: 15px 0 7px;
+  font-size: 1.08rem;
+}
+
+.skill-card p {
+  font-size: .92rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: .77rem;
+  background: #f1f6fb;
+  border: 1px solid #e0e9f1;
+  padding: 5px 9px;
+  border-radius: 99px;
+  color: #42566c;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px #183d6508;
+}
+
+.project img {
+  height: 245px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 23px;
+}
+
+.project-type {
+  font-size: .75rem;
+  font-weight: 850;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.project h3 {
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--navy);
+  margin: 8px 0 10px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+.project h4 {
+  margin: 18px 0 6px;
+  font-size: .88rem;
+  color: var(--navy);
+}
+
+.project ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #53677d;
+  font-size: .9rem;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 28px;
+  border-left: 2px solid #d5e5f5;
+}
+
+.role {
+  position: relative;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin-bottom: 20px;
+}
+
+.role:before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  background: var(--blue);
+  border: 4px solid #d9ebff;
+  border-radius: 50%;
+}
+
+.role-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.role h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.18rem;
+}
+
+.role .org {
+  font-weight: 700;
+  color: var(--blue);
+  margin: 3px 0 10px;
+}
+
+.date {
+  white-space: nowrap;
+  background: #eaf4ff;
+  color: #1c5d9f;
+  border-radius: 99px;
+  padding: 5px 10px;
+  font-size: .8rem;
+  font-weight: 800;
+  height: max-content;
+}
+
+.role ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: #53677d;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.education {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 23px;
+}
+
+.education h3 {
+  margin: 0 0 5px;
+  color: var(--navy);
+}
+
+.education .school {
+  color: var(--blue);
+  font-weight: 750;
+}
+
+.education p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.gallery {
+  background: #f0f6fc;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.gallery-grid img:first-child {
+  height: 474px;
+  grid-row: span 2;
+}
+
+.contact {
+  background: var(--navy);
+  color: white;
+}
+
+.contact .section-head h2 {
+  color: white;
+}
+
+.contact .section-head p {
+  color: #c2d2e3;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #193651;
+  border: 1px solid #2b4b68;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+}
+
+.contact-line {
+  padding: 13px 0;
+  border-bottom: 1px solid #2b4b68;
+  color: #d4e2f0;
+}
+
+.contact-line:last-child {
+  border-bottom: 0;
+}
+
+.contact-line a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-line a:hover {
+  text-decoration: underline;
+}
+
+.contact-note {
+  font-size: .87rem;
+  color: #c2d2e3;
+}
+
+.contact .btn-secondary {
+  color: var(--navy);
+}
+
+footer {
+  padding: 22px 0;
+  background: #0a1a2c;
+  color: #9fb2c6;
+  font-size: .82rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 850px) {
+  .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero-photo { max-width: 560px; }
+  .hero-photo img { height: 360px; }
+  .photo-label { left: 12px; }
+  .skill-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid img:first-child { height: 230px; grid-row: auto; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width: 620px) {
+  .nav { min-height: 64px; }
+  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); padding: 18px 4%; flex-direction: column; align-items: flex-start; gap: 14px; }
+  nav.open { display: flex; }
+  .menu { display: block; }
+  .hero { padding: 52px 0; }
+  .hero-photo img { height: 300px; }
+  section { padding: 60px 0; }
+  .skill-grid, .education-grid, .contact-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid img, .gallery-grid img:first-child { height: 230px; }
+  .check-list { grid-template-columns: 1fr; }
+  .role { padding: 20px; }
+  .stats-grid { gap: 15px; }
+  .stat { padding-left: 12px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">PHILIP <span>MWALE.</span></a>
+    <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Electronics Engineer · Kenya</div>
+      <h1>Mwale Philip<br><span>Mutuku</span></h1>
+      <p>Electronics Engineer bridging rigorous technical diagnosis, hands-on manual work, solar energy systems, embedded IoT development, and daily AI tools for workflow automation.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">Explore my projects ↗</a>
+        <a class="btn btn-secondary" href="#contact">Contact me</a>
+      </div>
+      <div class="tags" style="margin-top:22px">
+        <span class="tag">Solar Electronics</span>
+        <span class="tag">Manual Field Operations</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">AI Tools Integration</span>
+        <span class="tag">QC & Quality Control</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="435586.jpg" alt="Mwale Philip Mutuku">
+      <div class="photo-label">
+        <strong>Mwale Philip Mutuku</strong>
+        <small>Practical Engineering & Hard Work</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>BSc Electronics</strong><span>SEKU · Second Class Upper</span></div>
+    <div class="stat"><strong>Solar & Power Electronics</strong><span>After-sales, diagnostics & refurbishment</span></div>
+    <div class="stat"><strong>Manual Craftsmanship</strong><span>Field installation & mechanical assembly</span></div>
+    <div class="stat"><strong>AI Knowledge</strong><span>Everyday workflow & code optimization</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-image"><img src="435586.jpg" alt="Mwale Philip Mutuku" loading="lazy"></div>
+    <div class="about-copy">
+      <div class="section-head">
+        <div class="kicker">About me</div>
+        <h2>Practical Engineering, Physical Work & AI Productivity</h2>
+        <p>Building real-world solutions through technical precision and strong effort.</p>
+      </div>
+      <p>I hold a Bachelor of Science in Electronics from South Eastern Kenya University (SEKU). My background spans hands-on technical work, after-sales electronic service, solar refurbishment, technical instruction, and municipal energy installations.</p>
+      <p>I am highly capable when it comes to hard manual work—including equipment handling, tool operation, physical field installations, and mechanical assembly. In tandem with physical craftsmanship, I incorporate AI tools daily into my engineering workflow to write and optimize code, analyze technical data, and draft structured documentation rapidly.</p>
+      <ul class="check-list">
+        <li>Heavy manual & site work</li>
+        <li>Fault isolation & repair</li>
+        <li>Solar PV & energy systems</li>
+        <li>Daily AI tool integration</li>
+        <li>Technical instruction</li>
+        <li>Embedded MCU prototyping</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Capabilities</div>
+      <h2>Technical & Physical Skillset</h2>
+      <p>A comprehensive overview of field operations, electronics engineering, hardware repair, and modern software capabilities.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🛠️</div>
+        <h3>Manual & Physical Field Work</h3>
+        <p>Demonstrated capability for strenuous physical tasks, site installation, manual equipment handling, and workshop tools.</p>
+        <div class="tags"><span class="tag">Site Assembly</span><span class="tag">Physical Labor</span><span class="tag">Tool Safety</span><span class="tag">Heavy Handling</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <h3>Electrical Diagnostics & Testing</h3>
+        <p>Structured electrical and component testing using multimeters, oscilloscopes, and wiring continuity protocols.</p>
+        <div class="tags"><span class="tag">Multimeter</span><span class="tag">Oscilloscope</span><span class="tag">Continuity Checks</span><span class="tag">Harness Diagnostics</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☀️</div>
+        <h3>Solar & Renewable Power</h3>
+        <p>In-depth understanding of solar-powered appliances, battery management systems, charge controllers, and inverters.</p>
+        <div class="tags"><span class="tag">Solar PV</span><span class="tag">Charge Controllers</span><span class="tag">BMS Concepts</span><span class="tag">Refurbishment</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔬</div>
+        <h3>Component Repair & PCB Work</h3>
+        <p>Hands-on fault isolation on circuit boards, fine soldering, desoldering, and post-repair quality assurance.</p>
+        <div class="tags"><span class="tag">Analogue & Digital</span><span class="tag">PCB Repair</span><span class="tag">Soldering</span><span class="tag">Quality Control</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3>Embedded Systems & IoT</h3>
+        <p>Microcontroller programming, sensor integration, and real-time control system development.</p>
+        <div class="tags"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">C / Embedded C</span><span class="tag">Sensor Interfacing</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">💡</div>
+        <h3>AI & Everyday Tech Tools</h3>
+        <p>Daily use of artificial intelligence models to assist in writing logic, troubleshooting hardware code, and accelerating technical research.</p>
+        <div class="tags"><span class="tag">AI Prompt Engineering</span><span class="tag">VS Code</span><span class="tag">Git / GitHub</span><span class="tag">Technical Writing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Selected work</div>
+      <h2>Projects & Engineering Demonstrations</h2>
+      <p>Detailed insight into practical engineering solutions, field operations, and technical instruction.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85" alt="Circuit prototyping" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Final Year Project · Embedded Systems</div>
+          <h3>Adaptive IoT Traffic Control System with Acoustic Emergency Response</h3>
+          <p>An embedded system designed to automate traffic control dynamically and clear routes for emergency vehicles using acoustic recognition.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Programmed control logic on microcontrollers to manage signal cycles dynamically.</li>
+            <li>Integrated acoustic sound-level sensors to recognize emergency frequencies.</li>
+            <li>Leveraged AI code assistants during debugging to resolve timing constraints.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Embedded C</span><span class="tag">Acoustic Processing</span><span class="tag">AI Code Support</span><span class="tag">Prototyping</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Solar panels" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">After-Sales Technical Experience</div>
+          <h3>Solar Product Diagnostics & Quality Assurance</h3>
+          <p>Diagnosing and restoring solar-powered home systems, power units, and appliances back to operational standards.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Inspected physical casings and performed manual structural repairs.</li>
+            <li>Isolated fault locations in charge control boards and battery protection circuits.</li>
+            <li>Executed continuity checks on cables, solar panel leads, and wire harnesses.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Fault Isolation</span><span class="tag">Manual Repair</span><span class="tag">Solar PV</span><span class="tag">Quality Assurance</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="Heavy technical work" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Industrial Attachment · Field Operations</div>
+          <h3>Municipal Solar Lighting Infrastructure & Field Support</h3>
+          <p>Participated in hands-on installation and maintenance of municipal energy systems under the Machakos County Energy Department.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Performed manual heavy work, including positioning and securing solar light poles and brackets.</li>
+            <li>Supported cable jointing, trenching, and junction box terminal wiring.</li>
+            <li>Maintained field service logs and reported on operational safety.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Field Installation</span><span class="tag">Physical Labor</span><span class="tag">Electrical Safety</span><span class="tag">Cable Jointing</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85" alt="Lab instruction" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Technical Instruction</div>
+          <h3>Practical Electronics Laboratory Guidance</h3>
+          <p>Instructed college students on component behavior, breadboard construction, and diagnostic measurements.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Taught safe handling of workbench hand tools, soldering irons, and measurement instruments.</li>
+            <li>Supervised hands-on circuit assembly, microcontroller setup, and sensor integration.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Technical Training</span><span class="tag">Workshop Safety</span><span class="tag">Circuit Analysis</span><span class="tag">Mentorship</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Career journey</div>
+      <h2>Professional Work History</h2>
+      <p>Demonstrated history in technical service, manual field execution, and engineering instruction.</p>
+    </div>
+    <div class="timeline">
+      <article class="role">
+        <div class="role-top">
+          <div>
+            <h3>Technician — After-Sales, QC/QA & Refurbishment</h3>
+            <div class="org">Sun King · Kenya</div>
+          </div>
+          <span class="date">Jan 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Conduct comprehensive diagnostic procedures on solar electronics and battery assemblies.</li>
+          <li>Perform manual component replacement, soldering, wire harness repairs, and physical assembly.</li>
+          <li>Verify functionality through stringent post-repair Quality Control (QC) testing.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div class="role-top">
+          <div>
+            <h3>Electronics Instructor</h3>
+            <div class="org">Mumbuni Technical College · Machakos, Kenya</div>
+          </div>
+          <span class="date">Aug 2025 – Jan 2026</span>
+        </div>
+        <ul>
+          <li>Delivered practical and theoretical lessons on analogue electronics, digital logic, and embedded systems.</li>
+          <li>Guided students through hands-on laboratory exercises, tool usage, and physical circuit assembly.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div class="role-top">
+          <div>
+            <h3>Industrial Attachment Intern — Energy Department</h3>
+            <div class="org">Machakos County Government · Machakos, Kenya</div>
+          </div>
+          <span class="date">May – Aug 2024</span>
+        </div>
+        <ul>
+          <li>Assisted with physical installation, pole alignment, and maintenance of solar streetlights.</li>
+          <li>Participated in cable jointing, box terminations, and routine field audits.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Education & credentials</div>
+      <h2>Academic Background</h2>
+      <p>Higher education in electronics engineering supported by technical certifications.</p>
+    </div>
+    <div class="education-grid">
+      <div class="education">
+        <h3>Bachelor of Science in Electronics</h3>
+        <div class="school">South Eastern Kenya University (SEKU)</div>
+        <p>2021–2025 · Second Class Honours, Upper Division</p>
+        <p>Studied analogue and digital electronics, embedded systems, power electronics, and control theory.</p>
+      </div>
+      <div class="education">
+        <h3>Kenya Certificate of Secondary Education</h3>
+        <div class="school">Kathiani Boys High School</div>
+        <p>2017–2020 · Mean Grade B− (59 points)</p>
+        <p>Solid grounding in mathematics, physics, and chemistry.</p>
+      </div>
+      <div class="education">
+        <h3>Computer Packages Certificate</h3>
+        <div class="school">Machakos Institute of Technology</div>
+        <p>Distinction · 73%</p>
+        <p>Digital application competence and office software mastery.</p>
+      </div>
+      <div class="education">
+        <h3>Driving Qualification</h3>
+        <div class="school">Class B Driving Licence</div>
+        <p>Valid driving licence for field support, site travel, and logistical movement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Visual portfolio</div>
+      <h2>Work & Field Impressions</h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="435586.jpg" alt="Mwale Philip Mutuku" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85" alt="Electronics PCB" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=85" alt="Solar Panels" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=85" alt="Lab work" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85" alt="Field tools" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" style="color:#83bdff">Contact</div>
+      <h2>Get In Touch</h2>
+      <p>Available for roles in electronics engineering, solar technical service, embedded systems, physical field operations, and quality testing.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Contact details</h3>
+        <div class="contact-line">✉️ <a href="mailto:mutukuphilip2002@gmail.com">mutukuphilip2002@gmail.com</a></div>
+        <div class="contact-line">☎️ <a href="tel:+254742511543">+254 742 511 543</a></div>
+        <div class="contact-line">📍 Machakos / Nairobi, Kenya</div>
+        <div class="contact-line">🔗 <a href="https://www.linkedin.com/in/philip-mutuku-b2ba09230/" target="_blank" rel="noopener">LinkedIn Profile ↗</a></div>
+      </div>
+      <div class="contact-card">
+        <h3>Professional Enquiries</h3>
+        <p class="contact-note">Send an email or message via LinkedIn regarding potential technical opportunities, contracts, or engineering positions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:mutukuphilip2002@gmail.com?subject=Professional%20Opportunity">Email Philip ↗</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/philip-mutuku-b2ba09230/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Mwale Philip Mutuku · Electronics Engineer</span>
+    <span>Professional Engineering Portfolio</span>
+  </div>
+</footer>
+
+<script>
+const menu = document.getElementById('menu'), nav = document.getElementById('nav');
+menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+  menu.textContent = open ? '✕' : '☰';
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menu.setAttribute('aria-expanded', 'false');
+  menu.textContent = '☰';
+}));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
