@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portfolio of Mwale Philip Mutuku, Electronics Engineer focused on solar electronics, after-sales service, repair, quality testing, embedded systems, and technical instruction.">
+<meta name="description" content="Portfolio of Mwale Philip Mutuku, Electronics Engineer focused on solar electronics, manual fabrication, electrical troubleshooting, embedded systems, quality testing, and AI-assisted workflows.">
 <title>Mwale Philip Mutuku | Electronics Engineer</title>
 <style>
 :root {
@@ -199,10 +199,10 @@ h1 span {
 }
 
 .hero-photo img {
-  height: 430px;
+  height: 480px;
   width: 100%;
   object-fit: contain;
-  background: #eaf4ff;
+  background: #0f172a;
   border-radius: 28px;
   box-shadow: 0 25px 65px #183d6524;
 }
@@ -274,7 +274,7 @@ section {
 }
 
 .section-head h2 {
-  font-size: clamp(2.0rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.12;
   letter-spacing: -.045em;
   color: var(--navy);
@@ -284,6 +284,20 @@ section {
 .section-head p {
   margin: 0;
   color: var(--muted);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.about-image img {
+  height: 390px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
 }
 
 .about-copy p {
@@ -382,6 +396,12 @@ section {
   border-radius: 20px;
   background: white;
   box-shadow: 0 8px 24px #183d6508;
+}
+
+.project img {
+  height: 245px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .project-body {
@@ -487,7 +507,7 @@ section {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
 
@@ -501,19 +521,34 @@ section {
 .education h3 {
   margin: 0 0 5px;
   color: var(--navy);
-  font-size: 1.05rem;
 }
 
 .education .school {
   color: var(--blue);
   font-weight: 750;
-  font-size: .92rem;
 }
 
 .education p {
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: .88rem;
+  font-size: .92rem;
+}
+
+.gallery {
+  background: #f0f6fc;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .contact {
@@ -565,6 +600,15 @@ section {
   text-decoration: underline;
 }
 
+.contact-note {
+  font-size: .87rem;
+  color: #c2d2e3;
+}
+
+.contact .btn-secondary {
+  color: var(--navy);
+}
+
 footer {
   padding: 22px 0;
   background: #0a1a2c;
@@ -580,11 +624,12 @@ footer {
 }
 
 @media(max-width: 850px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 30px; }
-  .hero-photo { max-width: 560px; margin: auto; }
-  .hero-photo img { height: 360px; }
+  .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero-photo { max-width: 560px; }
+  .hero-photo img { height: 400px; }
   .photo-label { left: 12px; }
-  .skill-grid, .education-grid { grid-template-columns: 1fr 1fr; }
+  .skill-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
 }
@@ -595,10 +640,11 @@ footer {
   nav.open { display: flex; }
   .menu { display: block; }
   .hero { padding: 52px 0; }
-  .hero-photo img { height: 320px; }
+  .hero-photo img { height: 360px; }
   section { padding: 60px 0; }
-  .skill-grid, .education-grid, .contact-grid { grid-template-columns: 1fr; }
+  .skill-grid, .education-grid, .contact-grid, .gallery-grid { grid-template-columns: 1fr; }
   .check-list { grid-template-columns: 1fr; }
+  .role { padding: 20px; }
   .stats-grid { gap: 15px; }
   .stat { padding-left: 12px; }
 }
@@ -612,8 +658,8 @@ footer {
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -623,25 +669,26 @@ footer {
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow"><span class="dot"></span> Electronics Engineer · Machakos, Kenya</div>
+      <div class="eyebrow"><span class="dot"></span> Electronics Engineer · Kenya</div>
       <h1>Mwale Philip<br><span>Mutuku</span></h1>
-      <p>Electronics Engineer with a BSc in Electronics and hands-on expertise in after-sales repair, troubleshooting, refurbishment, solar power systems, embedded IoT development, and quality testing[span_0](start_span)[span_0](end_span).</p>
+      <p>Electronics Engineer bridging rigorous technical diagnosis, hands-on manual work, solar energy systems, embedded IoT development, and daily AI tools for workflow automation.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">Explore my projects ↗</a>
         <a class="btn btn-secondary" href="#contact">Contact me</a>
       </div>
       <div class="tags" style="margin-top:22px">
         <span class="tag">Solar Electronics</span>
-        <span class="tag">After-Sales & QC</span>
+        <span class="tag">Manual Field Operations</span>
         <span class="tag">Embedded Systems</span>
-        <span class="tag">Class B Driving Licence</span>
+        <span class="tag">AI Tools Integration</span>
+        <span class="tag">QC & Quality Control</span>
       </div>
     </div>
     <div class="hero-photo">
       <img src="435586.jpg" alt="Mwale Philip Mutuku">
       <div class="photo-label">
         <strong>Mwale Philip Mutuku</strong>
-        <small>Electronics Engineer</small>
+        <small>Practical Engineering & Hard Work</small>
       </div>
     </div>
   </div>
@@ -649,30 +696,31 @@ footer {
 
 <div class="stats">
   <div class="container stats-grid">
-    <div class="stat"><strong>BSc Electronics</strong><span>SEKU · Second Class Upper[span_1](start_span)[span_1](end_span)</span></div>
-    <div class="stat"><strong>Sun King Technician</strong><span>After-sales, QC/QA & Refurbishment[span_2](start_span)[span_2](end_span)</span></div>
-    <div class="stat"><strong>Instructor Experience</strong><span>Mumbuni Technical College[span_3](start_span)[span_3](end_span)</span></div>
-    <div class="stat"><strong>Municipal Energy</strong><span>Machakos County Government[span_4](start_span)[span_4](end_span)</span></div>
+    <div class="stat"><strong>BSc Electronics</strong><span>SEKU · Second Class Upper</span></div>
+    <div class="stat"><strong>Solar & Power Electronics</strong><span>After-sales, diagnostics & refurbishment</span></div>
+    <div class="stat"><strong>Manual Craftsmanship</strong><span>Field installation & mechanical assembly</span></div>
+    <div class="stat"><strong>AI Knowledge</strong><span>Everyday workflow & code optimization</span></div>
   </div>
 </div>
 
 <section id="about">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">About me</div>
-      <h2>Professional Profile & Expertise</h2>
-      <p>Bridging rigorous technical diagnosis, solar infrastructure, hardware repair, and educational instruction.</p>
-    </div>
+  <div class="container about-grid">
+    <div class="about-image"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85" alt="Engineering Laboratory Work" loading="lazy"></div>
     <div class="about-copy">
-      <p>Electronics Engineer with a BSc in Electronics and hands-on experience in after-sales repair, troubleshooting, refurbishment and quality checks for solar-powered electronic products at Sun King[span_5](start_span)[span_5](end_span). Experienced in fault isolation, cable and harness inspection, continuity testing, component-level troubleshooting and functional validation[span_6](start_span)[span_6](end_span).</p>
-      <p>Also brings experience supporting electronics practical instruction at Mumbuni Technical College and assisting with solar street-lighting and energy infrastructure work during industrial attachment at Machakos County Government[span_7](start_span)[span_7](end_span).</p>
+      <div class="section-head">
+        <div class="kicker">About me</div>
+        <h2>Practical Engineering, Physical Work & AI Productivity</h2>
+        <p>Building real-world solutions through technical precision and strong effort.</p>
+      </div>
+      <p>I hold a Bachelor of Science in Electronics from South Eastern Kenya University (SEKU). My background spans hands-on technical work, after-sales electronic service, solar refurbishment, technical instruction, and municipal energy installations.</p>
+      <p>I am highly capable when it comes to hard manual work—including equipment handling, tool operation, physical field installations, and mechanical assembly. In tandem with physical craftsmanship, I incorporate AI tools daily into my engineering workflow to write and optimize code, analyze technical data, and draft structured documentation rapidly.</p>
       <ul class="check-list">
-        <li>Fault isolation & returned-unit assessment[span_8](start_span)[span_8](end_span)</li>
-        <li>PCB & electronic assembly troubleshooting[span_9](start_span)[span_9](end_span)</li>
-        <li>Cable & harness continuity testing[span_10](start_span)[span_10](end_span)</li>
-        <li>Solar PV, charge controllers & BMS[span_11](start_span)[span_11](end_span)</li>
-        <li>Microcontroller / Embedded C design[span_12](start_span)[span_12](end_span)</li>
-        <li>Class B driving licence holder[span_13](start_span)[span_13](end_span)</li>
+        <li>Heavy manual & site work</li>
+        <li>Fault isolation & repair</li>
+        <li>Solar PV & energy systems</li>
+        <li>Daily AI tool integration</li>
+        <li>Technical instruction</li>
+        <li>Embedded MCU prototyping</li>
       </ul>
     </div>
   </div>
@@ -682,46 +730,121 @@ footer {
   <div class="container">
     <div class="section-head">
       <div class="kicker">Capabilities</div>
-      <h2>Technical Skillset & Instruments</h2>
-      <p>Comprehensive technical competencies derived from engineering studies, lab instruction, and industrial practice.</p>
+      <h2>Technical & Physical Skillset</h2>
+      <p>A comprehensive overview of field operations, electronics engineering, hardware repair, and modern software capabilities.</p>
     </div>
     <div class="skill-grid">
       <div class="skill-card">
         <div class="skill-icon">🛠️</div>
-        <h3>Electronics Troubleshooting</h3>
-        <p>Fault isolation, returned-unit assessment, PCB/electronic assembly troubleshooting, and component-level repair.</p>
-        <div class="tags"><span class="tag">Fault Isolation</span><span class="tag">PCB Repair</span><span class="tag">Component-level</span></div>
+        <h3>Manual & Physical Field Work</h3>
+        <p>Demonstrated capability for strenuous physical tasks, site installation, manual equipment handling, and workshop tools.</p>
+        <div class="tags"><span class="tag">Site Assembly</span><span class="tag">Physical Labor</span><span class="tag">Tool Safety</span><span class="tag">Heavy Handling</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">⚡</div>
-        <h3>Electrical Testing</h3>
-        <p>Continuity testing, cable and harness screening, connection inspection, multimeter and oscilloscope operation.</p>
-        <div class="tags"><span class="tag">Multimeter</span><span class="tag">Oscilloscope</span><span class="tag">Continuity Screening</span></div>
+        <h3>Electrical Diagnostics & Testing</h3>
+        <p>Structured electrical and component testing using multimeters, oscilloscopes, and wiring continuity protocols.</p>
+        <div class="tags"><span class="tag">Multimeter</span><span class="tag">Oscilloscope</span><span class="tag">Continuity Checks</span><span class="tag">Harness Diagnostics</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">☀️</div>
-        <h3>Solar & Power Systems</h3>
-        <p>Solar-powered products, charge controllers, inverter diagnostics, lithium and lead-acid battery systems, and BMS concepts.</p>
-        <div class="tags"><span class="tag">Solar PV</span><span class="tag">BMS Concepts</span><span class="tag">Inverter Diagnostics</span></div>
+        <h3>Solar & Renewable Power</h3>
+        <p>In-depth understanding of solar-powered appliances, battery management systems, charge controllers, and inverters.</p>
+        <div class="tags"><span class="tag">Solar PV</span><span class="tag">Charge Controllers</span><span class="tag">BMS Concepts</span><span class="tag">Refurbishment</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🔬</div>
-        <h3>Quality & Refurbishment</h3>
-        <p>QC inspections, functional testing, refurbishment support, diagnostic records, and recurring-fault observation.</p>
-        <div class="tags"><span class="tag">QC Inspections</span><span class="tag">Functional Validation</span><span class="tag">Refurbishment</span></div>
+        <h3>Component Repair & PCB Work</h3>
+        <p>Hands-on fault isolation on circuit boards, fine soldering, desoldering, and post-repair quality assurance.</p>
+        <div class="tags"><span class="tag">Analogue & Digital</span><span class="tag">PCB Repair</span><span class="tag">Soldering</span><span class="tag">Quality Control</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🤖</div>
-        <h3>Controls & Embedded Systems</h3>
-        <p>Arduino, ESP32, sensor integration, microcontroller fundamentals, C/Embedded C, and PLC ladder-logic fundamentals.</p>
-        <div class="tags"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">Embedded C</span><span class="tag">PLC Logic</span></div>
+        <h3>Embedded Systems & IoT</h3>
+        <p>Microcontroller programming, sensor integration, and real-time control system development.</p>
+        <div class="tags"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">C / Embedded C</span><span class="tag">Sensor Interfacing</span></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">💻</div>
-        <h3>Digital Tools & Software</h3>
-        <p>Proteus simulation, Linux, HTML5, CSS3, VS Code, Git/GitHub, and Chrome DevTools.</p>
-        <div class="tags"><span class="tag">Proteus</span><span class="tag">Git / GitHub</span><span class="tag">Linux</span><span class="tag">VS Code</span></div>
+        <div class="skill-icon">💡</div>
+        <h3>AI & Everyday Tech Tools</h3>
+        <p>Daily use of artificial intelligence models to assist in writing logic, troubleshooting hardware code, and accelerating technical research.</p>
+        <div class="tags"><span class="tag">AI Prompt Engineering</span><span class="tag">VS Code</span><span class="tag">Git / GitHub</span><span class="tag">Technical Writing</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Selected work</div>
+      <h2>Projects & Engineering Demonstrations</h2>
+      <p>Detailed insight into practical engineering solutions, field operations, and technical instruction.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85" alt="Circuit prototyping" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Final Year Project · Embedded Systems</div>
+          <h3>Adaptive IoT Traffic Control System with Acoustic Emergency Response</h3>
+          <p>An embedded system designed to automate traffic control dynamically and clear routes for emergency vehicles using acoustic recognition.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Programmed control logic on microcontrollers to manage signal cycles dynamically.</li>
+            <li>Integrated acoustic sound-level sensors to recognize emergency frequencies.</li>
+            <li>Leveraged AI code assistants during debugging to resolve timing constraints.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Embedded C</span><span class="tag">Acoustic Processing</span><span class="tag">AI Code Support</span><span class="tag">Prototyping</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85" alt="Solar panels" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">After-Sales Technical Experience</div>
+          <h3>Solar Product Diagnostics & Quality Assurance</h3>
+          <p>Diagnosing and restoring solar-powered home systems, power units, and appliances back to operational standards.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Inspected physical casings and performed manual structural repairs.</li>
+            <li>Isolated fault locations in charge control boards and battery protection circuits.</li>
+            <li>Executed continuity checks on cables, solar panel leads, and wire harnesses.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Fault Isolation</span><span class="tag">Manual Repair</span><span class="tag">Solar PV</span><span class="tag">Quality Assurance</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="Heavy technical work" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Industrial Attachment · Field Operations</div>
+          <h3>Municipal Solar Lighting Infrastructure & Field Support</h3>
+          <p>Participated in hands-on installation and maintenance of municipal energy systems under the Machakos County Energy Department.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Performed manual heavy work, including positioning and securing solar light poles and brackets.</li>
+            <li>Supported cable jointing, trenching, and junction box terminal wiring.</li>
+            <li>Maintained field service logs and reported on operational safety.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Field Installation</span><span class="tag">Physical Labor</span><span class="tag">Electrical Safety</span><span class="tag">Cable Jointing</span></div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85" alt="Lab instruction" loading="lazy">
+        <div class="project-body">
+          <div class="project-type">Technical Instruction</div>
+          <h3>Practical Electronics Laboratory Guidance</h3>
+          <p>Instructed college students on component behavior, breadboard construction, and diagnostic measurements.</p>
+          <h4>Key Contributions</h4>
+          <ul>
+            <li>Taught safe handling of workbench hand tools, soldering irons, and measurement instruments.</li>
+            <li>Supervised hands-on circuit assembly, microcontroller setup, and sensor integration.</li>
+          </ul>
+          <h4>Skills Demonstrated</h4>
+          <div class="tags"><span class="tag">Technical Training</span><span class="tag">Workshop Safety</span><span class="tag">Circuit Analysis</span><span class="tag">Mentorship</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -729,52 +852,152 @@ footer {
 <section id="experience">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">Career history</div>
-      <h2>Professional Experience</h2>
-      <p>A timeline of professional roles in technical service, quality control, engineering instruction, and public energy infrastructure.</p>
+      <div class="kicker">Career journey</div>
+      <h2>Professional Work History</h2>
+      <p>Demonstrated history in technical service, manual field execution, and engineering instruction.</p>
     </div>
     <div class="timeline">
-      <div class="role">
+      <article class="role">
         <div class="role-top">
           <div>
-            <h3>Technician - After-Sales, QC/QA & Refurbishment</h3>
+            <h3>Technician — After-Sales, QC/QA & Refurbishment</h3>
             <div class="org">Sun King · Kenya</div>
           </div>
-          <div class="date">Jan 2026 - Present[span_14](start_span)[span_14](end_span)</div>
+          <span class="date">Jan 2026 – Present</span>
         </div>
         <ul>
-          <li>Diagnose returned and serviceable solar-powered electronic products to identify electrical, electronic and functional faults[span_15](start_span)[span_15](end_span).</li>
-          <li>Use structured troubleshooting to isolate defective components, wiring faults, connection issues and abnormal product behaviour[span_16](start_span)[span_16](end_span).</li>
-          <li>Screen cables and harnesses and perform continuity tests to identify open circuits, short circuits and connection problems[span_17](start_span)[span_17](end_span).</li>
-          <li>Support component-level troubleshooting and repair involving solar power electronics, charge controllers and battery/BMS-related circuits[span_18](start_span)[span_18](end_span).</li>
-          <li>Assess returned units, support corrective work and carry out quality-control inspections during and after refurbishment[span_19](start_span)[span_19](end_span).</li>
-          <li>Perform functional checks on repaired or refurbished units before release and document diagnostic outcomes and recurring failure modes[span_20](start_span)[span_20](end_span).</li>
+          <li>Conduct comprehensive diagnostic procedures on solar electronics and battery assemblies.</li>
+          <li>Perform manual component replacement, soldering, wire harness repairs, and physical assembly.</li>
+          <li>Verify functionality through stringent post-repair Quality Control (QC) testing.</li>
         </ul>
-      </div>
-
-      <div class="role">
+      </article>
+      <article class="role">
         <div class="role-top">
           <div>
             <h3>Electronics Instructor</h3>
             <div class="org">Mumbuni Technical College · Machakos, Kenya</div>
           </div>
-          <div class="date">Aug 2025 - Jan 2026[span_21](start_span)[span_21](end_span)</div>
+          <span class="date">Aug 2025 – Jan 2026</span>
         </div>
         <ul>
-          <li>Delivered theoretical and practical instruction in electronics, embedded systems, analogue and digital circuits, and industrial electronics[span_22](start_span)[span_22](end_span).</li>
-          <li>Led practical sessions on electronic components, circuit construction, measurement and systematic troubleshooting[span_23](start_span)[span_23](end_span).</li>
-          <li>Guided students through circuit simulation, PCB troubleshooting, sensor interfacing and microcontroller-based projects[span_24](start_span)[span_24](end_span).</li>
-          <li>Emphasised electrical safety, accurate measurement and structured diagnostic methods[span_25](start_span)[span_25](end_span).</li>
+          <li>Delivered practical and theoretical lessons on analogue electronics, digital logic, and embedded systems.</li>
+          <li>Guided students through hands-on laboratory exercises, tool usage, and physical circuit assembly.</li>
         </ul>
-      </div>
-
-      <div class="role">
+      </article>
+      <article class="role">
         <div class="role-top">
           <div>
-            <h3>Industrial Attachment Intern - Energy Department</h3>
+            <h3>Industrial Attachment Intern — Energy Department</h3>
             <div class="org">Machakos County Government · Machakos, Kenya</div>
           </div>
-          <div class="date">May 2024 - Aug 2024[span_26](start_span)[span_26](end_span)</div>
+          <span class="date">May – Aug 2024</span>
         </div>
         <ul>
-          <li>Assisted engineers with installation, preventive maintenance and troubleshooting of solar street-lighting syste
+          <li>Assisted with physical installation, pole alignment, and maintenance of solar streetlights.</li>
+          <li>Participated in cable jointing, box terminations, and routine field audits.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Education & credentials</div>
+      <h2>Academic Background</h2>
+      <p>Higher education in electronics engineering supported by technical certifications.</p>
+    </div>
+    <div class="education-grid">
+      <div class="education">
+        <h3>Bachelor of Science in Electronics</h3>
+        <div class="school">South Eastern Kenya University (SEKU)</div>
+        <p>2021–2025 · Second Class Honours, Upper Division</p>
+        <p>Studied analogue and digital electronics, embedded systems, power electronics, and control theory.</p>
+      </div>
+      <div class="education">
+        <h3>Kenya Certificate of Secondary Education</h3>
+        <div class="school">Kathiani Boys High School</div>
+        <p>2017–2020 · Mean Grade B− (59 points)</p>
+        <p>Solid grounding in mathematics, physics, and chemistry.</p>
+      </div>
+      <div class="education">
+        <h3>Computer Packages Certificate</h3>
+        <div class="school">Machakos Institute of Technology</div>
+        <p>Distinction · 73%</p>
+        <p>Digital application competence and office software mastery.</p>
+      </div>
+      <div class="education">
+        <h3>Driving Qualification</h3>
+        <div class="school">Class B Driving Licence</div>
+        <p>Valid driving licence for field support, site travel, and logistical movement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Visual portfolio</div>
+      <h2>Work & Field Impressions</h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85" alt="Electronics PCB" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=85" alt="Solar Panels" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85" alt="Field tools" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker" style="color:#83bdff">Contact</div>
+      <h2>Get In Touch</h2>
+      <p>Available for roles in electronics engineering, solar technical service, embedded systems, physical field operations, and quality testing.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Contact details</h3>
+        <div class="contact-line">✉️ <a href="mailto:mutukuphilip2002@gmail.com">mutukuphilip2002@gmail.com</a></div>
+        <div class="contact-line">☎️ <a href="tel:+254742511543">+254 742 511 543</a></div>
+        <div class="contact-line">📍 Machakos / Nairobi, Kenya</div>
+        <div class="contact-line">🔗 <a href="https://www.linkedin.com/in/philip-mutuku-b2ba09230/" target="_blank" rel="noopener">LinkedIn Profile ↗</a></div>
+      </div>
+      <div class="contact-card">
+        <h3>Professional Enquiries</h3>
+        <p class="contact-note">Send an email or message via LinkedIn regarding potential technical opportunities, contracts, or engineering positions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:mutukuphilip2002@gmail.com?subject=Professional%20Opportunity">Email Philip ↗</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/philip-mutuku-b2ba09230/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Mwale Philip Mutuku · Electronics Engineer</span>
+    <span>Professional Engineering Portfolio</span>
+  </div>
+</footer>
+
+<script>
+const menu = document.getElementById('menu'), nav = document.getElementById('nav');
+menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+  menu.textContent = open ? '✕' : '☰';
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menu.setAttribute('aria-expanded', 'false');
+  menu.textContent = '☰';
+}));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
